@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>week 2: Principles and Practices - John Adoor Malek</title>
+		<title>Week 2: My Digital Workshop Notebook - John Adoor Malek</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -9,10 +9,8 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
 		
 		<style>
-			/* Your existing week2 styles here */
 			.week-date { color: #666; font-style: italic; }
 			.less-bold { font-weight: 400; }
-			.image-caption { text-align: center; font-style: italic; color: #666; margin-top: -10px; }
 			
 			/* In-Page Navigation Box CSS */
 			.inpage-nav-box {
@@ -92,6 +90,46 @@
 				color: #1c6691;
 			}
 
+			/* Screenshot styling */
+			.screenshot-container {
+				margin: 25px 0;
+				text-align: center;
+				border: 1px solid #e0e0e0;
+				border-radius: 8px;
+				padding: 15px;
+				background: #fafafa;
+			}
+
+			.screenshot {
+				max-width: 100%;
+				height: auto;
+				border: 1px solid #ddd;
+				border-radius: 4px;
+				box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+			}
+
+			.screenshot-caption {
+				font-style: italic;
+				color: #666;
+				margin-top: 10px;
+				font-size: 0.9em;
+			}
+
+			.process-step {
+				margin: 30px 0;
+				padding: 20px;
+				background: #f8f9fa;
+				border-left: 4px solid #2980B9;
+				border-radius: 0 8px 8px 0;
+			}
+
+			.process-step h4 {
+				margin-top: 0;
+				color: #2980B9;
+				border-bottom: 1px solid #e0e0e0;
+				padding-bottom: 10px;
+			}
+
 			@media screen and (max-width: 1200px) {
 				.inpage-nav-box {
 					float: none;
@@ -118,7 +156,7 @@
 						</ul>
 					</header>
 
-					<!-- week 2 Content -->
+					<!-- Week 2 Content -->
 					<section>
 						<div class="inpage-nav-box">
 							<h4>
@@ -133,8 +171,8 @@
 						</div>
 
 						<header class="main">
-							<h1>week 2: weekly task</h1>
-							<p class="week-date">Date: From - To (include Dates)</p>
+							<h1>Week 2: My Digital Workshop Notebook</h1>
+							<p class="week-date"> Date: 1st October to 6 October 2025</p>
 						</header>
 
 						<!-- Summary of the weekly task -->
@@ -143,14 +181,14 @@
 								<h3>Quick Summary</h3>
 							</header>
 							<ul class="alt">
-								<li><strong>Skills Learned:</strong> </li>
-								<li><strong>Digital Tools and Software Used:</strong> </li>
-								<li><strong>Topics:</strong> </li>
-								<li><strong>Key Concepts:</strong> </li>
-								<li><strong>Challenges Faced:</strong> </li>
+								<li><strong>Skills Learned:</strong> Git version control, GitHub repository management, SSH key setup, VS Code usage</li>
+								<li><strong>Digital Tools and Software Used:</strong> Git, Git Bash, VS Code, GitHub, SSH keys</li>
+								<li><strong>Topics:</strong> Documentation, Version Control, Repository Management</li>
+								<li><strong>Key Concepts:</strong> Git workflow (add, commit, push), SSH authentication, GitHub Pages deployment</li>
+								<li><strong>Challenges Faced:</strong> Setting up SSH keys, understanding Git workflow, deploying with GitHub Pages</li>
 							</ul>
 						</div>
-						<!-- ... all your existing week2 content bellow... -->
+						
 						<div id="Notes" class="tab-content active">
 							<div>
 								&nbsp;
@@ -158,18 +196,101 @@
 								<header class="major">
 								<h2 id="intro-section">Introduction</h2>
 								</header>
-								<p>Add your introduction</p>
+								<p>Week 2 focused on establishing a digital workshop notebook using GitHub as the primary documentation platform. The week emphasized the importance of documentation as a "superpower" for personal reference, career development, collaboration, and program submission. As the Chinese proverb in the materials states: "The palest ink is better than the best memory."</p>
+								
+								<p>The core objective was to master the tools and workflows for effective project documentation, including Git for version control, VS Code as a text editor, and GitHub for hosting repositories. The week culminated in creating a personal portfolio repository and deploying it as a live website using GitHub Pages.</p>
 
 								<header class="major">
 								<h2 id="process-docs-section">Process Documentation</h2>
 								</header>
-								<p>Add the process documentation of this week task</p>
+								
+								<div class="process-step">
+									<h4>Step 1: Tool Installation & Setup</h4>
+									<p>Installed essential development tools:</p>
+									<ul>
+										<li><strong>Git & Git Bash:</strong> Downloaded from git-scm.com with default settings</li>
+										<li><strong>VS Code:</strong> Installed as the primary code editor from code.visualstudio.com</li>
+										<li><strong>GitHub Account:</strong> Created with professional username</li>
+									</ul>
+									
+									<div class="screenshot-container">
+										<img src="images/tool-installation.png" alt="Development tools installation" class="screenshot">
+										<p class="screenshot-caption">Figure 1: Git and VS Code installation process</p>
+									</div>
+								</div>
+								
+								<div class="process-step">
+									<h4>Step 2: SSH Key Setup</h4>
+									<p>Configured secure password-less connection to GitHub:</p>
+									<ul>
+										<li>Generated SSH key pair using: <code>ssh-keygen -t ed25519 -C "your_email@example.com"</code></li>
+										<li>Copied public key using <code>cat ~/.ssh/id_ed25519.pub</code></li>
+										<li>Added public key to GitHub Settings under SSH and GPG keys</li>
+									</ul>
+									
+									<div class="screenshot-container">
+										<img src="images/ssh-setup.png" alt="SSH key setup process" class="screenshot">
+										<p class="screenshot-caption">Figure 2: SSH key generation and GitHub configuration</p>
+									</div>
+								</div>
+								
+								<div class="process-step">
+									<h4>Step 3: Repository Creation</h4>
+									<p>Created and configured GitHub repository:</p>
+									<ul>
+										<li>Named using format: username-UniPod_Name</li>
+										<li>Set as Public visibility</li>
+										<li>Initialized with README file</li>
+										<li>Cloned to local machine: <code>git clone git@github.com:username/repo-name.git</code></li>
+									</ul>
+									
+									<div class="screenshot-container">
+										<img src="images/repository-creation.png" alt="GitHub repository creation" class="screenshot">
+										<p class="screenshot-caption">Figure 3: Creating and cloning repository on GitHub</p>
+									</div>
+								</div>
+								
+								<div class="process-step">
+									<h4>Step 4: Git Workflow Implementation</h4>
+									<p>Practiced the essential three-step Git workflow:</p>
+									<ol>
+										<li>Edited README.md in VS Code</li>
+										<li>Staged changes with <code>git add README.md</code></li>
+										<li>Committed with descriptive message: <code>git commit -m "Update README"</code></li>
+										<li>Pushed changes: <code>git push origin main</code></li>
+									</ol>
+									
+									<div class="screenshot-container">
+										<img src="images/git-workflow.png" alt="Git workflow execution" class="screenshot">
+										<p class="screenshot-caption">Figure 4: Git add, commit, and push workflow in terminal</p>
+									</div>
+								</div>
+								
+								<div class="process-step">
+									<h4>Step 5: GitHub Pages Deployment</h4>
+									<p>Deployed repository as live website:</p>
+									<ul>
+										<li>Enabled GitHub Pages in repository Settings</li>
+										<li>Selected "Deploy from a branch" as source</li>
+										<li>Chose main branch and root folder</li>
+										<li>Site published at: https://username.github.io/repository-name/</li>
+									</ul>
+									
+									<div class="screenshot-container">
+										<img src="images/pages-deployment.png" alt="GitHub Pages deployment" class="screenshot">
+										<p class="screenshot-caption">Figure 5: GitHub Pages configuration and live website</p>
+									</div>
+								</div>
 						
 								<!-- Reflection -->
 								<header class="major">
 								<h2 id="reflection-section">Reflection</h2>
 								</header>
-								<p>Add your reflection</p>
+								<p>This week provided foundational skills in documentation and version control that are essential for modern software development and digital fabrication workflows. The process of setting up SSH keys initially seemed complex, but the analogy of a "lock and key" helped conceptualize the security mechanism. Understanding the three-step Git workflow (add, commit, push) was crucial - it transforms from being just commands to a logical process of preparing, documenting, and sharing changes.</p>
+								
+								<p>The most valuable insight was realizing how documentation serves multiple purposes: as a personal memory aid, a professional portfolio, and a collaboration tool. Creating a live website through GitHub Pages demonstrated how technical documentation can become immediately accessible and shareable. This aligns with the program's emphasis on building a digital presence and portfolio.</p>
+								
+								<p>Moving forward, maintaining consistent documentation habits will be essential. The skills learned this week establish the groundwork for all future projects in the program, ensuring that work is properly versioned, documented, and shareable. The emphasis on documentation as a "new professional habit" resonates with the long-term goal of building a comprehensive portfolio that demonstrates growth and capability throughout the UniPod program.</p>
 								
 							</div>
 						</div>
